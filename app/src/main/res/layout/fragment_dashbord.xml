@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_smoke"
+    tools:context=".DashbordFragment">
+
+
+    <TextView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="150sp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:alpha="0.90"
+        android:background="@drawable/petbackground"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/btnRegisterPet"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        app:icon="@android:drawable/ic_menu_add"
+        android:layout_width="200sp"
+        android:layout_height="70sp"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="3dp"
+        android:backgroundTint="@android:color/white"
+        android:textColor="@color/r_blue"
+        android:text="@string/register_pet"
+        android:textAllCaps="false"
+        android:alpha="0.7"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:background="@color/white_smoke"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" >
+
+        <TextView
+            android:id="@+id/txtHeader"
+            android:layout_marginLeft="65sp"
+            android:layout_marginTop="19sp"
+            android:textColor="@color/r_blue"
+            android:layout_marginRight="100sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/my_pet" />
+
+        <ImageView
+            android:id="@+id/imageViewPet"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/ic_baseline_preview_24"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="15sp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:background="@color/white_smoke"
+        android:layout_height="55dp"
+        android:layout_marginTop="1dp"
+        app:cardCornerRadius="1dp"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" >
+
+        <TextView
+            android:id="@+id/txtHealth"
+            android:layout_marginLeft="65sp"
+            android:layout_marginTop="19sp"
+            android:textColor="@color/r_blue"
+            android:layout_marginRight="100sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pet Adoption" />
+
+
+        <ImageView
+            android:id="@+id/imagePetNutrition"
+            android:layout_width="65dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/ic_baseline_medical_services_24"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView444"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="15sp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewToMeasurements"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white_smoke"
+        app:cardCornerRadius="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/cardView2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/cardView2"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        app:layout_constraintVertical_bias="0.0" >
+
+
+        <TextView
+            android:id="@+id/txtOthers"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="19sp"
+            android:textColor="@color/r_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/measurements" />
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+            android:layout_marginStart="14dp"
+            android:layout_marginLeft="1dp"
+            android:src="@drawable/ic_baseline_calculate_24"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/imageView44"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="300sp"
+            android:layout_marginTop="15sp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_navigate_next_24" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

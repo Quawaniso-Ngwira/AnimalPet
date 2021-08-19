@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Carolie">
+
+    <TextView
+        android:id="@+id/showPetHeader"
+        android:layout_width="match_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="10sp"
+        android:background="@android:color/holo_blue_dark"
+        tools:ignore="MissingConstraints" />
+
+    <ImageView
+        android:id="@+id/backFromCalorie"
+        android:layout_width="23dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_white" />
+
+
+    <TextView
+        android:id="@+id/textView26"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Measure Calorie Requirements"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/white_smoke"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/showPetHeader"
+        app:layout_constraintVertical_bias="0.38">
+
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="40sp"
+            android:width="150sp"
+            android:height="40sp"
+            android:background="@android:color/holo_blue_light" />
+
+        <CheckBox
+            android:id="@+id/carolieMale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="37sp"
+            android:text="Male"
+            android:textColor="@color/white" />
+
+
+        <CheckBox
+            android:id="@+id/carolieFemale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200sp"
+            android:layout_marginTop="37sp"
+            android:text="Female" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="100sp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Weight(KGS)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PetHeightCarolie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/r_blue"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130sp"
+            android:layout_marginTop="100sp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Height(CM)">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PetWeightCarolie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/r_blue"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="100sp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="237sp"
+            android:layout_marginTop="100sp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:hint="Age">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/PetAgeCarolie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/r_blue"
+                android:inputType="numberDecimal"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/carolieActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="170sp"
+            android:text="How Active is the pet"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginTop="200sp"
+            android:width="220sp"
+            android:height="40sp"
+            android:background="@color/white_smoke" />
+
+        <TextView
+            android:id="@+id/textView25"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="200sp"
+            android:layout_marginTop="200sp"
+            android:width="150sp"
+            android:height="40sp"
+            android:background="@color/white_smoke" />
+
+        <CheckBox
+            android:id="@+id/checkBoxSedentary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25sp"
+            android:layout_marginTop="194sp"
+            android:text="@string/sedentary" />
+
+        <CheckBox
+            android:id="@+id/checkBoxVeryActive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="205sp"
+            android:layout_marginTop="194sp"
+            android:text="Active" />
+
+        <Button
+            android:id="@+id/buttonCalculateCarolie"
+            android:layout_width="130sp"
+            android:layout_height="60sp"
+            android:layout_marginLeft="80sp"
+            android:layout_marginTop="260sp"
+            android:backgroundTint="@android:color/holo_orange_dark"
+            android:text="@string/compute"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/buttonResetCarolie"
+            android:layout_width="wrap_content"
+            android:layout_height="60sp"
+            android:layout_marginLeft="220sp"
+            android:layout_marginTop="260sp"
+            android:backgroundTint="#0BED4B"
+            android:text="@string/reset"
+            android:textAllCaps="false" />
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.animalpet"
+    tools:ignore="ExtraText">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AnimalPet">
+        <activity android:name=".ViewDetailsActivity"></activity>
+        <activity android:name=".HealthAndStatus" />
+        <activity android:name=".Carolie" />
+        <activity android:name=".BodyMassIndex" />
+        <activity android:name=".BioManagements" />
+        <activity android:name=".VetDetails" />
+        <activity android:name=".RegisterPet2" />
+        <activity android:name=".MainPetActivity" />
+        <activity android:name=".RegisterPet" />
+        <activity android:name=".ResetPassWord" />
+        <activity android:name=".Dashbord" />
+        <activity android:name=".Register" />
+        <activity android:name=".LogIn" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

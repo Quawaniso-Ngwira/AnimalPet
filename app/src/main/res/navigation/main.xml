@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menuDashbord">
+
+    <fragment
+        android:id="@+id/menuDashbord"
+        android:name="com.example.animalpet.DashbordFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_dashbord" />
+
+    <fragment
+        android:id="@+id/menuProfile"
+        android:name="com.example.animalpet.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+    <fragment
+        android:id="@+id/menuSchemes"
+        android:name="com.example.animalpet.SchemesFragment"
+        android:label="Schemes"
+        tools:layout="@layout/fragment_schemes" />
+    <fragment
+        android:id="@+id/menuNotification"
+        android:name="com.example.animalpet.NotificationFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/menuSetting"
+        android:name="com.example.animalpet.SettingFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_setting" />
+
+    <fragment
+        android:id="@+id/menuAboutUs"
+        android:name="com.example.animalpet.AboutFragment"
+        android:label="About"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/menuSupport"
+        android:name="com.example.animalpet.SupportFragment"
+        android:label="Support"
+        tools:layout="@layout/fragment_support" />
+
+</navigation>

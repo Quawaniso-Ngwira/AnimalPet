@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="6dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="6dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:id="@+id/linear_layout"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+
+        <TextView
+            android:id="@+id/ptname"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Pet Name"
+            android:textColor="@color/r_blue"
+            android:textSize="20sp"
+            android:drawableEnd="@drawable/ic_baseline_expand_more_24_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.777"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/expandable_layout"
+            android:layout_width="match_parent"
+            android:textAlignment="center"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:background="@android:color/holo_orange_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.777"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/ptcolor"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Pet Color"
+                android:textSize="15sp"
+               android:layout_below="@+id/ptname"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/ptOrigin"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Pet Origin"
+                android:layout_below="@id/ptcolor"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/ptcolor"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/ptcolor"
+                app:layout_constraintTop_toBottomOf="@+id/ptcolor" />
+
+            <TextView
+                android:id="@+id/ptType"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Pet Type"
+                android:layout_below="@id/ptOrigin"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="@+id/ptOrigin"
+                app:layout_constraintStart_toStartOf="@+id/ptOrigin"
+                app:layout_constraintTop_toBottomOf="@+id/ptOrigin" />
+
+
+                <TextView
+                    android:id="@+id/vstatus"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:text="Vaccination Status"
+                    android:layout_below="@+id/ptType"
+                    tools:ignore="NotSibling" />
+
+                <TextView
+                    android:id="@+id/rdue"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Rabies due"
+                    android:layout_below="@id/vstatus"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/pscheme"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pet Scheme"
+                    android:layout_below="@id/rdue"
+                    android:textSize="15sp"
+                     />
+
+            <TextView
+                android:id="@+id/second"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/holo_orange_light"
+                android:layout_below="@+id/pscheme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.777"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/vtname"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Veterinary Name"
+                android:layout_below="@id/second"
+                android:textSize="15sp"/>
+
+
+            <TextView
+                android:id="@+id/vtaddress"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:text="Veterinary address"
+                android:layout_below="@+id/vtname"
+                tools:ignore="NotSibling" />
+
+            <TextView
+                android:id="@+id/vttreatments"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Previous Vet Treatments"
+                android:layout_below="@id/vtaddress"
+                android:textSize="15sp"
+                />
+
+            <TextView
+                android:id="@+id/vtremarks"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Veterinary Remarks"
+                android:layout_below="@id/vttreatments"
+                android:textSize="15sp"
+                />
+
+
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_below="@id/vtremarks"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="150sp"
+                android:layout_marginTop="25dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/vttreatments"
+                app:layout_constraintVertical_bias="0.723"
+                app:srcCompat="@drawable/ic_baseline_edit_24" />
+
+            <ImageView
+                android:id="@+id/deletePetEntry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_below="@+id/vtremarks"
+                android:background="@drawable/ic_baseline_delete_24"
+                android:layout_toEndOf="@+id/imageView9"/>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
