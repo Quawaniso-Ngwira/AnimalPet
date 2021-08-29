@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="1dp"
         android:id="@+id/linear_layout"
-        android:background="@color/white"
+        android:background="@color/white_smoke"
         android:orientation="vertical"
         android:padding="12dp">
 
@@ -27,11 +27,12 @@
             android:text="Pet Name"
             android:textColor="@color/r_blue"
             android:textSize="20sp"
-            android:drawableEnd="@drawable/ic_baseline_expand_more_24_blue"
+            android:drawableEnd="@drawable/ic_baseline_navigate_next_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.777"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
 
 
         <RelativeLayout
@@ -82,40 +83,12 @@
                 app:layout_constraintStart_toStartOf="@+id/ptOrigin"
                 app:layout_constraintTop_toBottomOf="@+id/ptOrigin" />
 
-
-                <TextView
-                    android:id="@+id/vstatus"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:textSize="15sp"
-                    android:text="Vaccination Status"
-                    android:layout_below="@+id/ptType"
-                    tools:ignore="NotSibling" />
-
-                <TextView
-                    android:id="@+id/rdue"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:text="Rabies due"
-                    android:layout_below="@id/vstatus"
-                    android:textSize="15sp"
-                    />
-
-                <TextView
-                    android:id="@+id/pscheme"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:text="Pet Scheme"
-                    android:layout_below="@id/rdue"
-                    android:textSize="15sp"
-                     />
-
             <TextView
                 android:id="@+id/second"
                 android:layout_width="match_parent"
                 android:layout_height="0.5dp"
                 android:background="@android:color/holo_orange_light"
-                android:layout_below="@+id/pscheme"
+                android:layout_below="@+id/ptType"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.777"
                 app:layout_constraintStart_toStartOf="parent"
@@ -158,6 +131,14 @@
                 />
 
 
+            <TextView
+                android:id="@+id/ptdob"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vtremarks"
+                android:text="TextView" />
+
+
             <ImageView
                 android:id="@+id/imageView9"
                 android:layout_width="wrap_content"
@@ -182,6 +163,9 @@
                 android:layout_below="@+id/vtremarks"
                 android:background="@drawable/ic_baseline_delete_24"
                 android:layout_toEndOf="@+id/imageView9"/>
+
+
+
         </RelativeLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

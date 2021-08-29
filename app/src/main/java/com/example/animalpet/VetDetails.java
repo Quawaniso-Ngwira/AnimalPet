@@ -32,11 +32,15 @@ public class VetDetails extends AppCompatActivity {
         buttonVetDetails = findViewById(R.id.buttonVetDetails);
         backToRegisterPet2 = findViewById(R.id.backToRegisterPet2);
         DB = new DBHelper(this);
-
+/*
+        //Receiving the intents
+        String vetnamee = getIntent().getExtras().getString("petname");
+        vetname.setText(vetnamee);
+*/
         backToRegisterPet2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(VetDetails.this, RegisterPet2.class);
+                Intent intent = new Intent(VetDetails.this, RegisterPet.class);
                 startActivity(intent);
             }
         });
@@ -55,7 +59,7 @@ public class VetDetails extends AppCompatActivity {
                 else{
                     Boolean insert = DB.insertVetData(vname, vaddress, vtreatments, vrecomendation);
                     if (insert == true){
-                        Toast.makeText(VetDetails.this, "Pet registered successfully", Toast.LENGTH_LONG).show();
+                        Toast.makeText(VetDetails.this, "Vet registered successfully", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(getApplicationContext(), MainPetActivity.class);
                         startActivity(intent);
                     }

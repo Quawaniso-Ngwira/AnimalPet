@@ -13,13 +13,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimalPet">
-        <activity android:name=".ViewDetailsActivity"></activity>
+        <activity android:name=".PetadoptionWebView"></activity>
+        <activity android:name=".UpdatePetInfo" />
+        <activity android:name=".ViewDetailsActivity" />
         <activity android:name=".HealthAndStatus" />
         <activity android:name=".Carolie" />
         <activity android:name=".BodyMassIndex" />
         <activity android:name=".BioManagements" />
         <activity android:name=".VetDetails" />
-        <activity android:name=".RegisterPet2" />
         <activity android:name=".MainPetActivity" />
         <activity android:name=".RegisterPet" />
         <activity android:name=".ResetPassWord" />

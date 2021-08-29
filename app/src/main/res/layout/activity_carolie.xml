@@ -14,6 +14,7 @@
         android:background="@android:color/holo_blue_dark"
         tools:ignore="MissingConstraints" />
 
+
     <ImageView
         android:id="@+id/backFromCalorie"
         android:layout_width="23dp"
@@ -25,14 +26,14 @@
         app:layout_constraintHorizontal_bias="0.067"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_baseline_arrow_back_white" />
-
 
     <TextView
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Measure Calorie Requirements"
+        android:text="Measure Calorie"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -190,7 +191,7 @@
             android:id="@+id/buttonCalculateCarolie"
             android:layout_width="130sp"
             android:layout_height="60sp"
-            android:layout_marginLeft="80sp"
+            android:layout_marginLeft="60sp"
             android:layout_marginTop="260sp"
             android:backgroundTint="@android:color/holo_orange_dark"
             android:text="@string/compute"
@@ -200,7 +201,7 @@
             android:id="@+id/buttonResetCarolie"
             android:layout_width="wrap_content"
             android:layout_height="60sp"
-            android:layout_marginLeft="220sp"
+            android:layout_marginLeft="200sp"
             android:layout_marginTop="260sp"
             android:backgroundTint="#0BED4B"
             android:text="@string/reset"

@@ -143,10 +143,19 @@ public class DBHelper extends SQLiteOpenHelper {
     public Cursor ViewPetData(){
         SQLiteDatabase MyDB = this.getReadableDatabase();
         Cursor cursor = MyDB.rawQuery("Select * " +
-                "from pets, pethealth, vet " +
-                "where pets.pet_id = pethealth.health_id " +
-                "and pethealth.health_id = vet.vet_id",null);
+                "from pets " ,null);
         return cursor;
+    }
+
+    public Boolean updatePetData(String pname, String pcolor, String porigin, String ptype, String pdate) {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues values2 = new ContentValues();
+        values2.put("petname", pname);
+        values2.put("petcolor", pcolor);
+        values2.put("petorigin", porigin);
+        values2.put("pettype", ptype);
+        long results2 = MyDB.insert("pets", null, values2);
+        return true;
     }
 
 

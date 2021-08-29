@@ -82,14 +82,11 @@ public class MainPetActivity extends AppCompatActivity {
         dataholder = new ArrayList<>();
 
         while (cursor.moveToNext()) {
-            model obj = new model(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4),
-                    cursor.getString(5), cursor.getString(6), cursor.getString(7),
-                    cursor.getString(8), cursor.getString(9), cursor.getString(10),
-                    cursor.getString(11));
+            model obj = new model(cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
             dataholder.add(obj);
         }
 
-        myAdapter adapter = new myAdapter(dataholder);
+        adapter = new myAdapter(dataholder);
         recyclerView.setAdapter(adapter);
 
     }
@@ -103,6 +100,6 @@ public class MainPetActivity extends AppCompatActivity {
             }
         }
 
-        myAdapter.filterList(filteredList);
+        adapter.filterList(filteredList);
     }
 }

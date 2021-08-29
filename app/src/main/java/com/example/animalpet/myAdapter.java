@@ -50,13 +50,13 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myviewholder> {
         holder.pcolor.setText(dataholder.get(position).getPetcolor());
         holder.porigin.setText(dataholder.get(position).getPetorigin());
         holder.ptype.setText(dataholder.get(position).getPettype());
-        holder.vstatus.setText(dataholder.get(position).getVaccinationstatus());
+       /* holder.vstatus.setText(dataholder.get(position).getVaccinationstatus());
         holder.rdue.setText(dataholder.get(position).getRabiesdue());
         holder.pscheme.setText(dataholder.get(position).getHealthscheme());
         holder.vtname.setText(dataholder.get(position).getVetname());
         holder.vtaddress.setText(dataholder.get(position).getAddress());
         holder.vttreatments.setText(dataholder.get(position).getTreatments());
-        holder.vtremarks.setText(dataholder.get(position).getVetrecomendation());
+        holder.vtremarks.setText(dataholder.get(position).getVetrecomendation()); */
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,10 +81,10 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myviewholder> {
     }
 
 
-    public static void filterList(ArrayList<model> filteredList) {
+    public void filterList(ArrayList<model> filteredList) {
         dataholder = filteredList;
-        myAdapter adapter1 = new myAdapter(filteredList);
-        adapter1.notifyDataSetChanged();
+       // myAdapter adapter1 = new myAdapter(filteredList);
+        notifyDataSetChanged();
 
     }
 
@@ -101,9 +101,6 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myviewholder> {
             pcolor = (TextView) itemView.findViewById(R.id.ptcolor);
             ptype = (TextView) itemView.findViewById(R.id.ptType);
             porigin = (TextView) itemView.findViewById(R.id.ptOrigin);
-            vstatus = (TextView) itemView.findViewById(R.id.vstatus);
-            rdue = (TextView) itemView.findViewById(R.id.rdue);
-            pscheme = (TextView) itemView.findViewById(R.id.pscheme);
             vtname = (TextView) itemView.findViewById(R.id.vtname);
             vtaddress = (TextView) itemView.findViewById(R.id.vtaddress);
             vttreatments = (TextView) itemView.findViewById(R.id.vttreatments);
@@ -121,8 +118,6 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myviewholder> {
                     model myadapter = dataholder.get(getAdapterPosition());
                     myadapter.setExpandable(!myadapter.isExpandable());
                     notifyItemChanged(getAdapterPosition());
-
-
                 }
             }); */
         }

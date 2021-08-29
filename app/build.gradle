@@ -3,6 +3,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\QUAWANISO\\Desktop\\AnimalPet.jks')
+            storePassword '20thjuly1994'
+            keyPassword '20thjuly1994'
+            keyAlias 'test'
+        }
+    }
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
 

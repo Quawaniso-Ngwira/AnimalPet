@@ -89,7 +89,7 @@
             android:id="@+id/btnResult"
             android:layout_width="130sp"
             android:layout_height="60sp"
-            android:layout_marginLeft="80sp"
+            android:layout_marginLeft="60sp"
             android:layout_marginTop="200sp"
             android:backgroundTint="@android:color/holo_orange_dark"
             android:text="@string/compute"
@@ -99,7 +99,7 @@
             android:id="@+id/btnReset"
             android:layout_width="wrap_content"
             android:layout_height="60sp"
-            android:layout_marginLeft="220sp"
+            android:layout_marginLeft="200sp"
             android:layout_marginTop="200sp"
             android:backgroundTint="#0BED4B"
             android:text="@string/reset"
@@ -109,17 +109,30 @@
             android:id="@+id/Result"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15sp"
+            android:layout_marginLeft="60sp"
             android:layout_marginTop="290sp"
-            android:textSize="17sp"
+            android:textSize="20sp"
+            android:textColor="@android:color/holo_orange_light"
             android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="320sp"
+            android:textSize="20sp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/holo_orange_light"
+            android:textStyle="bold" />
+
 
         <TextView
             android:id="@+id/bmiValueAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60sp"
-            android:layout_marginTop="310sp" />
+            android:layout_marginTop="330sp" />
 
 
         <TextView
@@ -127,7 +140,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60sp"
-            android:layout_marginTop="330sp" />
+            android:layout_marginTop="350sp" />
 
     </androidx.cardview.widget.CardView>
 
@@ -156,7 +169,7 @@
         android:id="@+id/textView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Measure BMI Requirements"
+        android:text="Measure BMI"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"

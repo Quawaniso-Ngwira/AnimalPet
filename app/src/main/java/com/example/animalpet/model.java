@@ -3,7 +3,7 @@ package com.example.animalpet;
 public class model {
 
 
-    String petname, petcolor, petorigin, pettype, vaccinationstatus, rabiesdue, healthscheme, vetname, address, treatments, vetrecomendation;
+    String petname, petcolor, petorigin, pettype/*, vaccinationstatus, rabiesdue, healthscheme, vetname, address, treatments, vetrecomendation*/;
 
     private boolean expandable;
 
@@ -15,18 +15,18 @@ public class model {
         this.expandable = expandable;
     }
 
-    public model(String petname, String petcolor, String petorigin, String pettype, String vaccinationstatus, String rabiesdue, String healthscheme, String vetname, String address, String treatments, String vetrecomendation) {
+    public model(String petname, String petcolor, String petorigin, String pettype/*, String vaccinationstatus, String rabiesdue, String healthscheme, String vetname, String address, String treatments, String vetrecomendation */) {
         this.petname = petname;
         this.petcolor = petcolor;
         this.petorigin = petorigin;
         this.pettype = pettype;
-        this.vaccinationstatus = vaccinationstatus;
+   /*     this.vaccinationstatus = vaccinationstatus;
         this.rabiesdue = rabiesdue;
         this.healthscheme = healthscheme;
         this.vetname = vetname;
         this.address = address;
         this.treatments = treatments;
-        this.vetrecomendation = vetrecomendation;
+        this.vetrecomendation = vetrecomendation; */
         this.expandable = false;
     }
 
@@ -62,7 +62,7 @@ public class model {
     public void setPettype(String pettype) {
         this.pettype = pettype;
     }
-
+/*
     public String getVaccinationstatus() {
         return vaccinationstatus;
     }
@@ -117,63 +117,23 @@ public class model {
 
     public void setVetrecomendation(String vetrecomendation) {
         this.vetrecomendation = vetrecomendation;
-    }
+    }*/
 
-    /**
-     * public model(String petname, String petcolor, String petorigin, String pettype) {
-     * this.petname = petname;
-     * this.petcolor = petcolor;
-     * this.petorigin = petorigin;
-     * this.pettype = pettype;
-     * this.expandable = false;
-     * }
-     * <p>
-     * public String getPetname() {
-     * return petname;
-     * }
-     * <p>
-     * public void setPetname(String petname) {
-     * this.petname = petname;
-     * }
-     * <p>
-     * public String getPetcolor() {
-     * return petcolor;
-     * }
-     * <p>
-     * public void setPetcolor(String petcolor) {
-     * this.petcolor = petcolor;
-     * }
-     * <p>
-     * public String getPetorigin() {
-     * return petorigin;
-     * }
-     * <p>
-     * public void setPetorigin(String petorigin) {
-     * this.petorigin = petorigin;
-     * }
-     * <p>
-     * public String getPettype() {
-     * return pettype;
-     * }
-     * <p>
-     * public void setPettype(String pettype) {
-     * this.pettype = pettype;
-     * }
-     */
+
     @Override
     public String toString() {
         return "model{" +
                 "petname='" + petname + '\'' +
                 ", petcolor='" + petcolor + '\'' +
                 ", petorigin='" + petorigin + '\'' +
-                ", pettype='" + pettype + '\'' +
+                ", pettype='" + pettype + '\'' + /*
                 ", vaccinationstatus='" + vaccinationstatus + '\'' +
                 ", rabiesdue='" + rabiesdue + '\'' +
                 ", healthscheme='" + healthscheme + '\'' +
                 ", vetname='" + vetname + '\'' +
                 ", address='" + address + '\'' +
                 ", treatments='" + treatments + '\'' +
-                ", vetrecomendation='" + vetrecomendation + '\'' +
+                ", vetrecomendation='" + vetrecomendation + '\'' +*/
                 ", expandable=" + expandable +
                 '}';
     }
