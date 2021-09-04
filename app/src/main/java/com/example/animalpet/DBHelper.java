@@ -3,6 +3,7 @@ package com.example.animalpet;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
+import android.database.CursorWrapper;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
@@ -67,16 +68,26 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //inserting into vets table
-    public Boolean insertVetData(String vetname, String address, String treatments, String vetrecomendation) {
+    public Boolean insertVetData(String petname, String vetname, String address, String treatments, String vetrecomendation) {
         SQLiteDatabase MyDB = this.getWritableDatabase();
         ContentValues values4 = new ContentValues();
         values4.put("vetname", vetname);
         values4.put("address", address);
         values4.put("treatments", treatments);
         values4.put("vetrecomendation", vetrecomendation);
-        long results4 = MyDB.insert("vet", null, values4);
-        return true;
+        Cursor cursor = MyDB.rawQuery("Select vetname,address,treatments,vetrecomendation from vet,pets where petname = ? ", new String[]{petname});
+        if (cursor.getCount() > 0){
+            long r = MyDB.update("pets", values4, "petname= ?", new String[]{petname});
+            if (r == -1) {
+                return false;
+            } else
+                return true;
+        }
+        else
+            return false;
     }
+
+
 
     public boolean deletePetInfo(String petname){
         SQLiteDatabase MyDB = this.getWritableDatabase();
@@ -147,17 +158,51 @@ public class DBHelper extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public Boolean updatePetData(String pname, String pcolor, String porigin, String ptype, String pdate) {
-        SQLiteDatabase MyDB = this.getWritableDatabase();
-        ContentValues values2 = new ContentValues();
-        values2.put("petname", pname);
-        values2.put("petcolor", pcolor);
-        values2.put("petorigin", porigin);
-        values2.put("pettype", ptype);
-        long results2 = MyDB.insert("pets", null, values2);
-        return true;
+    public Cursor ViewUsername(){
+        SQLiteDatabase MyDB = this.getReadableDatabase();
+        Cursor cursor = MyDB.rawQuery("Select username " +
+                "from users " ,null);
+        return cursor;
     }
 
+    public Boolean updatePetData(String petname, String petcolor, String petorigin, String pettype, String petdate) {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues values2 = new ContentValues();
+        values2.put("petname", petname);
+        values2.put("petcolor", petcolor);
+        values2.put("petorigin", petorigin);
+        values2.put("pettype", pettype);
+        Cursor cursor = MyDB.rawQuery("Select * from pets where petname = ? ", new String[]{petname});
+        if (cursor.getCount() > 0){
+            long r = MyDB.update("pets", values2, "petname= ?", new String[]{petname});
+            if (r == -1) {
+                return false;
+            } else
+                return true;
+        }
+        else
+            return false;
+    }
+
+    public Boolean updateVetData(String vetname, String vetaddress, String vettreatments, String vetrecomendation) {
+        SQLiteDatabase MyDB = this.getWritableDatabase();
+        ContentValues values4 = new ContentValues();
+        values4.put("vetname", vetname);
+        values4.put("address", vetaddress);
+        values4.put("treatments", vettreatments);
+        values4.put("vetrecomendation", vetrecomendation);
+        Cursor cursor = MyDB.rawQuery("Select * from vet where vetname = ? ", new String[]{vetname});
+        if (cursor.getCount() > 0){
+            long r = MyDB.update("vet", values4, "vetname= ?", new String[]{vetname});
+            if (r == -1) {
+                return false;
+            } else
+                    return true;
+            }
+                else
+                    return false;
+        }
+    }
 
 
 
@@ -172,4 +217,3 @@ public class DBHelper extends SQLiteOpenHelper {
      return cursor;
      }
      */
-}

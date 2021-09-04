@@ -50,13 +50,13 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myviewholder> {
         holder.pcolor.setText(dataholder.get(position).getPetcolor());
         holder.porigin.setText(dataholder.get(position).getPetorigin());
         holder.ptype.setText(dataholder.get(position).getPettype());
-       /* holder.vstatus.setText(dataholder.get(position).getVaccinationstatus());
+    /*    holder.vstatus.setText(dataholder.get(position).getVaccinationstatus());
         holder.rdue.setText(dataholder.get(position).getRabiesdue());
-        holder.pscheme.setText(dataholder.get(position).getHealthscheme());
+        holder.pscheme.setText(dataholder.get(position).getHealthscheme()); */
         holder.vtname.setText(dataholder.get(position).getVetname());
         holder.vtaddress.setText(dataholder.get(position).getAddress());
         holder.vttreatments.setText(dataholder.get(position).getTreatments());
-        holder.vtremarks.setText(dataholder.get(position).getVetrecomendation()); */
+        holder.vtremarks.setText(dataholder.get(position).getVetrecomendation());
         holder.linearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -65,6 +65,13 @@ public class myAdapter extends RecyclerView.Adapter<myAdapter.myviewholder> {
                 intent.putExtra("pcolor",dataholder.get(position).getPetcolor());
                 intent.putExtra("porigin",dataholder.get(position).getPetorigin());
                 intent.putExtra("ptype",dataholder.get(position).getPettype());
+
+
+                //
+                intent.putExtra("vname",dataholder.get(position).getVetname());
+                intent.putExtra("vadress",dataholder.get(position).getAddress());
+                intent.putExtra("vtreatment",dataholder.get(position).getTreatments());
+                intent.putExtra("vremarks",dataholder.get(position).getVetrecomendation());
                 context.startActivity(intent);
             }
         });

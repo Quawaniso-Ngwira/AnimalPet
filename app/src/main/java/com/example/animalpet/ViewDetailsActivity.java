@@ -10,13 +10,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 public class ViewDetailsActivity extends AppCompatActivity {
 
     static DBHelper DB;
     TextView petnameInViewDetails, petcolorinDetails, petorigininDetails, pettypeinDetails, petdateofbirthDetails,vetnameInViewDetails, pettreatmentsinDetails, petremarksinDetails, petadressinDetails;
     String petnamesummary, petcolorsummary, petoriginsummary, pettypesummary, petdateofbirthsummary, vetnamesummary, vetaddresssummary, vettreatmentsummary, vetremarkssummary;
-    ImageView deletePetInfo, editPetInfo;
-    Button btnRegisterVet;
+    ImageView deletePetInfo, editPetInfo, editVetInfo;
+    //Button btnRegisterVet;
+    FloatingActionButton btnRegisterVet;
     int position;
 
     @Override
@@ -29,33 +32,34 @@ public class ViewDetailsActivity extends AppCompatActivity {
         petorigininDetails = findViewById(R.id.petorigininDetails);
         pettypeinDetails = findViewById(R.id.pettypeinDetails);
         petdateofbirthDetails = findViewById(R.id.petdateofbirthdetails);
-/*
+        editVetInfo = findViewById(R.id.editVetInfo);
+
         vetnameInViewDetails = findViewById(R.id.vetnameInViewDetails);
         pettreatmentsinDetails = findViewById(R.id.pettreatmentsinDetails);
         petremarksinDetails = findViewById(R.id.petremarksinDetails);
         petadressinDetails = findViewById(R.id.petadressinDetails);
-*/
+
         petnamesummary = getIntent().getStringExtra("pname");
         petcolorsummary = getIntent().getStringExtra("pcolor");
         petoriginsummary = getIntent().getStringExtra("porigin");
         pettypesummary = getIntent().getStringExtra("ptype");
         petdateofbirthsummary = getIntent().getStringExtra("pdate");
-/*
+
         vetnamesummary = getIntent().getStringExtra("vtname");
         vetaddresssummary = getIntent().getStringExtra("vtaddress");
         vettreatmentsummary = getIntent().getStringExtra("vttreatments");
         vetremarkssummary = getIntent().getStringExtra("vtremarks");
-*/
+
         petnameInViewDetails.setText(petnamesummary);
         petcolorinDetails.setText(petcolorsummary);
         petorigininDetails.setText(petoriginsummary);
         pettypeinDetails.setText(pettypesummary);
         petdateofbirthDetails.setText(petdateofbirthsummary);
 
-/*        vetnameInViewDetails.setText(vetnamesummary);
+       vetnameInViewDetails.setText(vetnamesummary);
         pettreatmentsinDetails.setText(vettreatmentsummary);
         petremarksinDetails.setText(vettreatmentsummary);
-        petadressinDetails.setText(vetaddresssummary); */
+        petadressinDetails.setText(vetaddresssummary);
 
         deletePetInfo = findViewById(R.id.deletePetInfo);
         editPetInfo = findViewById(R.id.editPetInfo);
@@ -70,6 +74,15 @@ public class ViewDetailsActivity extends AppCompatActivity {
                 intent.putExtra("petname", petname);
                 startActivity(intent);
                 finish();
+            }
+        });
+
+        editVetInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // get all Intent extras into update section and update using id
+                Intent intent = new Intent(ViewDetailsActivity.this, UpdateVet.class);
+                startActivity(intent);
             }
         });
 

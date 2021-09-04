@@ -65,15 +65,15 @@ public class DashbordFragment extends Fragment {
         Button btnRegisterPet = (Button) view.findViewById(R.id.btnRegisterPet);
         CardView cardViewToMeasurements = (CardView) view.findViewById(R.id.cardViewToMeasurements);
 
-/*
+
         cardToHealthAndStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), PetadoptionWebView.class);
+                Intent intent = new Intent(getActivity(), HealthAndStatus.class);
                 startActivity(intent);
             }
         });
-*/
+
         cardViewToMeasurements.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

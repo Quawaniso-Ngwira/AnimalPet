@@ -13,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimalPet">
-        <activity android:name=".PetadoptionWebView"></activity>
+        <activity android:name=".UpdateVet"></activity>
+        <activity android:name=".NavigationHeader" />
+        <activity android:name=".PetadoptionWebView" />
         <activity android:name=".UpdatePetInfo" />
         <activity android:name=".ViewDetailsActivity" />
         <activity android:name=".HealthAndStatus" />

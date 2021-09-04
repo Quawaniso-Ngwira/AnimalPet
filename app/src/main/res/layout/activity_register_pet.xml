@@ -148,7 +148,8 @@
          android:layout_height="100sp"
          android:paddingLeft="5dp"
          android:paddingRight="5dp"
-         app:layout_constraintTop_toBottomOf="@+id/DateOfBirth" >
+         app:layout_constraintTop_toBottomOf="@+id/DateOfBirth"
+         tools:ignore="NotSibling">
 
 
      </RadioGroup>
@@ -200,6 +201,8 @@
          app:layout_constraintEnd_toEndOf="parent"
          app:layout_constraintStart_toStartOf="parent"
          app:layout_constraintTop_toBottomOf="@+id/radioButtonFemale" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
